@@ -1,4 +1,5 @@
 body {
+  color: red;
   -webkit-user-select: none;
           user-select: none;
 }
