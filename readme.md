@@ -26,10 +26,13 @@ Have fun!
 I'll add these features later:
 - [ ] concat - https://www.npmjs.com/package/gulp-concat
 - [ ] sprity - https://www.npmjs.com/package/sprity
+- [ ] gulp-shell
 - [ ] gulp-changed
 - [ ] gulp-rename 
 - [ ] gulp-imagemin
 - [ ] gulp-cache
+- [ ] gulp-jshint
+- [ ] gulp-eslint
 - [ ] maybe latest bootstrap https://gist.github.com/ntry/8a87ecb8427f044211dc3bfa390ff971
 
 - [ ] update this to-do list again ;)
