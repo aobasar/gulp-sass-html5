@@ -21,7 +21,7 @@ Have fun!
 ## My To-Do List for this project
 - [x] create repo on github
 - [x] autoprefixer
-- [x] browserlist (support > %2)
+- [x] browserlist (support > %2 - package.json)
 - [x] del (for dist folder)
 
 I'll add these features later:
