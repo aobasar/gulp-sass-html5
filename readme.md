@@ -22,11 +22,12 @@ Have fun!
 - [x] autoprefixer
 - [x] browserlist (support > %2 - package.json)
 - [x] del (for dist folder)
+- [x] gulp-shell
+- [x] file(s) path converted variable
 
 I'll add these features later:
 - [ ] concat - https://www.npmjs.com/package/gulp-concat
 - [ ] sprity - https://www.npmjs.com/package/sprity
-- [ ] gulp-shell
 - [ ] gulp-changed
 - [ ] gulp-rename 
 - [ ] gulp-imagemin
