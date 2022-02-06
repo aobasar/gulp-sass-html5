@@ -1,8 +1,8 @@
 {
   "name": "A-gulp-browsersync",
-  "version": "1.0.1",
-  "description": "Browsersync + Sass + Gulp",
-  "author": "",
+  "version": "1.0.2",
+  "description": "Gulp + Browsersync Starter Template Kit 💖",
+  "author": "Ahmet O. Basar",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,7 @@
   "keywords": [],
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "10.4.2",
     "browser-sync": "^2.27.7",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
@@ -20,5 +21,11 @@
     "gulp-terser": "^1.4.0",
     "postcss": "^8.1.2",
     "sass": "^1.49.0"
-  }
+  },
+  "dependencies": {
+    "browserslist": "^4.19.1"
+  },
+  "browserslist": [
+    "> 2%"
+  ]
 }

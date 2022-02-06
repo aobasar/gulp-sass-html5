@@ -1,14 +1,26 @@
+
+
 body {
   // color: blue;
   // cursor: pointer;
   // height: 3000px;
+  user-select: none;
+
+  p {
+    color: rgb(29, 29, 29);
+  }
+
+  ::placeholder {
+    color: gray;
+  }
+
 }
 
 
 h1, h2, h3 {
   color: darkblue;
   &:hover {
-    color: red;
+    color: rgb(216, 91, 19);
   }
 }
 

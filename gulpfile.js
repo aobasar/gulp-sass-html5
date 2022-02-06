@@ -6,6 +6,7 @@ const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const terser = require('gulp-terser');
 const htmlmin = require('gulp-htmlmin');
+const autoprefixer = require('autoprefixer')
 
 const browsersync = require('browser-sync').create();
 
@@ -14,8 +15,11 @@ function scssTask() {
   return src('src/scss/style.scss', { sourcemaps: true })
     .pipe(sass())
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([cssnano()]))
-    .pipe(dest('src/css/', { sourcemaps: '.' }))
+    
+    .pipe(postcss([ autoprefixer() ]))
+    .pipe(dest('src/css/'))
+    
+    .pipe(postcss([ cssnano()] ))
     .pipe(dest('dist/css/', { sourcemaps: '.' }))
 }
 
@@ -36,6 +40,7 @@ function minihtmlTask() {
 // Browsersync Tasks
 function browsersyncServe(cb) {
   browsersync.init({
+    watch: true,
     server: {
       // baseDir: '.'
       baseDir: 'src/'
