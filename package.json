@@ -23,7 +23,8 @@
     "sass": "^1.49.0"
   },
   "dependencies": {
-    "browserslist": "^4.19.1"
+    "browserslist": "^4.19.1",
+    "del": "^6.0.0"
   },
   "browserslist": [
     "> 2%"

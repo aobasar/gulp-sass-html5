@@ -7,8 +7,22 @@ const cssnano = require('cssnano');
 const terser = require('gulp-terser');
 const htmlmin = require('gulp-htmlmin');
 const autoprefixer = require('autoprefixer')
-
 const browsersync = require('browser-sync').create();
+const del = require('del');
+
+
+const paths = {
+  styles: {
+    src: 'src/scss/**/*.scss',
+    dest: 'dist/css/'
+  },
+  scripts: {
+    src: 'src/js/**/*.js',
+    dest: 'dist/js/'
+  }
+};
+
+
 
 // Sass Task
 function scssTask() {
@@ -35,6 +49,12 @@ function minihtmlTask() {
   return src('src/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest('dist/'));
+}
+
+// Clean Dist & Sub Folders
+function clean(cb) {
+  del(['dist/*']);
+  cb();
 }
 
 // Browsersync Tasks
@@ -68,5 +88,9 @@ exports.default = series(
   watchTask
 );
 
+
+exports.clean = clean;
+
+
 /* Combines task functions and/or composed operations into larger operations that will be executed one after another, in sequential order. There are no imposed limits on the nesting depth of composed operations using series() and parallel(). */ 
-exports.build = series(scssTask,jsTask,minihtmlTask);
+exports.build = series(clean,scssTask,jsTask,minihtmlTask);
