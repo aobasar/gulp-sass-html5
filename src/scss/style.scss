@@ -1,0 +1,18 @@
+body {
+  // color: blue;
+  // cursor: pointer;
+  // height: 3000px;
+}
+
+
+h1, h2, h3 {
+  color: darkblue;
+  &:hover {
+    color: red;
+  }
+}
+
+.top {
+  display: block;
+  text-align: right;
+}
