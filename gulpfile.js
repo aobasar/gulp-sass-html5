@@ -6,7 +6,6 @@ const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const terser = require('gulp-terser');
 const htmlmin = require('gulp-htmlmin');
-const shell = require('gulp-shell')
 const autoprefixer = require('autoprefixer')
 const browsersync = require('browser-sync').create();
 const del = require('del');
@@ -33,10 +32,10 @@ function scssTask() {
   return src(paths.styles.src, { sourcemaps: true })
     .pipe(sass())
     .pipe(sass().on('error', sass.logError))
-    
+
     .pipe(postcss([ autoprefixer() ]))
     .pipe(dest(paths.styles.srcCss))
-    
+
     .pipe(postcss([ cssnano()] ))
     .pipe(dest(paths.styles.dest, { sourcemaps: '.' }))
 }
@@ -52,7 +51,7 @@ function jsTask() {
 function minihtmlTask() {
   return src(paths.styles.srcHtml)
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(dest(paths.styles.destFolder));
+    .pipe(dest(paths.styles.destFolder))
 }
 
 // Clean Dist & Sub Folders
@@ -60,6 +59,9 @@ function clean(cb) {
   del([paths.styles.destFolder+'*']);
   cb();
 }
+
+
+
 
 // Browsersync Tasks
 function browsersyncServe(cb) {
@@ -93,8 +95,11 @@ exports.default = series(
   watchTask
 );
 
-/* clean dist folder */
+/* Clean dist folder */
 exports.clean = clean;
 
-/* Combines task functions and/or composed operations into larger operations that will be executed one after another, in sequential order. There are no imposed limits on the nesting depth of composed operations using series() and parallel(). */ 
+/*
+  Combines task functions and/or composed operations into larger operations that will be executed one after another,
+  in sequential order. There are no imposed limits on the nesting depth of composed operations using series() and parallel().
+*/
 exports.build = series(clean,scssTask,jsTask,minihtmlTask);

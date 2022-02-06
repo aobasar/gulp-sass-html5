@@ -22,7 +22,6 @@ Have fun!
 - [x] autoprefixer
 - [x] browserlist (support > %2 - package.json)
 - [x] del (for dist folder)
-- [x] gulp-shell
 - [x] file(s) path converted variable
 
 I'll add these features later:
@@ -30,6 +29,7 @@ I'll add these features later:
 - [ ] sprity - https://www.npmjs.com/package/sprity
 - [ ] gulp-changed
 - [ ] gulp-rename 
+- [ ] gulp-exec
 - [ ] gulp-imagemin
 - [ ] gulp-cache
 - [ ] gulp-jshint

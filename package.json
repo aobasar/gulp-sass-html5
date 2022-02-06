@@ -18,14 +18,14 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^9.0.0",
     "gulp-sass": "^5.1.0",
-    "gulp-shell": "^0.8.0",
     "gulp-terser": "^1.4.0",
     "postcss": "^8.1.2",
     "sass": "^1.49.0"
   },
   "dependencies": {
     "browserslist": "^4.19.1",
-    "del": "^6.0.0"
+    "del": "^6.0.0",
+    "gulp-exec": "^5.0.0"
   },
   "browserslist": [
     "> 2%"
