@@ -1,6 +1,6 @@
 # Gulp + Browsersync Starter Template Kit 💖
 
-Without hassle, your Gulp+Browsersync Starter Template Kit ready to go!
+Without hassle, your Gulp+Browsersync Starter Template Kit ready to go!  
 
 
 Installation:
